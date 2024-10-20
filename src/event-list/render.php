@@ -3,10 +3,6 @@
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; 
 $current_category = isset($_GET['category']) && !empty($_GET['category']) ? sanitize_text_field($_GET['category']) : '';
 
-if ($current_category) {
-    $paged = 1;
-}
-
 $args = [
     'post_type'      => 'event',
     'post_status'    => 'publish',
@@ -26,16 +22,11 @@ if ($current_category) {
 
 $query = new WP_Query($args);
 
-// echo '<pre>';
-// var_dump($query);
-// echo '</pre>';
-
 if ($query->have_posts()) :
 
     echo '<ul>';
     while ($query->have_posts()) : $query->the_post();
         ?>
-
 <li>
     <h2><?php the_title(); ?></h2>
     <p><?php the_excerpt(); ?></p>
@@ -60,6 +51,7 @@ if ($query->have_posts()) :
         'prev_text'    => __('&laquo; Anterior', 'eventify-block-pack'),
         'next_text'    => __('Siguiente &raquo;', 'eventify-block-pack'),
         'type'         => 'list',
+        'format'       => '?paged=%#%',
     ];
 
     if ($current_category) {
@@ -79,7 +71,6 @@ endif;
 wp_reset_postdata();
 ?>
 
-
 <h3>FILTROS</h3>
 <form method="get" action="">
     <label for="category">Filtrar por Categoría:</label>
@@ -96,5 +87,10 @@ wp_reset_postdata();
         }
         ?>
     </select>
+    <input type="hidden" name="paged" value="1" />
     <button type="submit">Filtrar</button>
 </form>
+
+<p <?php echo get_block_wrapper_attributes(); ?>>
+    <?php esc_html_e('Eventify Block Pack – hello from a dynamic block!!!', 'eventify-block-pack'); ?>
+</p>
