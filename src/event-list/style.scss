@@ -31,8 +31,8 @@
 		overflow: hidden;
 
 		img{
-			width: auto;
-			height: 100%;
+			width: 105%;
+    		height: 100%;
 		}
 
 		.categories{
@@ -202,12 +202,19 @@
 
 		}
 		li:hover{
-			background-color: #3490dc;
+			background-color: #81c6ff;
 			
 			a{
 				color: #fff;
 			}
 
+		}
+		li:has(> span.current) {
+			background-color: #3490dc;
+			color: #eee;
+		}
+		li:hover:has(> span.dots) {
+			color: #eee;
 		}
 	}
 }

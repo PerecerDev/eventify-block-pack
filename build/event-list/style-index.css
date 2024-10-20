@@ -32,7 +32,7 @@
   overflow: hidden;
 }
 .event-card picture img {
-  width: auto;
+  width: 105%;
   height: 100%;
 }
 .event-card picture .categories {
@@ -170,10 +170,17 @@
   text-decoration: none;
 }
 .pagination ul li:hover {
-  background-color: #3490dc;
+  background-color: #81c6ff;
 }
 .pagination ul li:hover a {
   color: #fff;
+}
+.pagination ul li:has(> span.current) {
+  background-color: #3490dc;
+  color: #eee;
+}
+.pagination ul li:hover:has(> span.dots) {
+  color: #eee;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
