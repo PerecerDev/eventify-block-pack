@@ -4,8 +4,8 @@
   "name": "create-block/eventify-block-pack",
   "version": "0.1.0",
   "title": "Eventify Block Pack",
-  "category": "widgets",
-  "icon": "smiley",
+  "category": "eventify",
+  "icon": "list-view",
   "description": "Example block scaffolded with Create Block tool.",
   "example": {},
   "supports": {

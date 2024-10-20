@@ -35,11 +35,11 @@
 
             <div>
 
-                <span><i class="fas fa-euro-sign"></i>
+                <span>
                     <?php echo esc_html(get_post_meta(get_the_ID(), '_event_price', true)); ?> €
                 </span>
                 <span><i class="fas fa-ticket-alt"></i>
-                    <?php echo esc_html(get_post_meta(get_the_ID(), '_tickets_left', true)); ?>
+                    <?php echo esc_html(get_post_meta(get_the_ID(), '_tickets_left', true)); ?> Libres
                 </span>
 
             </div>

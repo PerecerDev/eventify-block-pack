@@ -97,7 +97,7 @@ module.exports = window["wp"]["serverSideRender"];
   \***********************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/eventify-block-pack","version":"0.1.0","title":"Eventify Block Pack","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"eventify-block-pack","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/eventify-block-pack","version":"0.1.0","title":"Eventify Block Pack","category":"eventify","icon":"list-view","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"eventify-block-pack","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 

@@ -24,3 +24,21 @@ function enqueue_font_awesome() {
     wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css', [], '6.0.0-beta3' );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
+
+function eventify_block_category( $categories, $post ) {
+	foreach ( $categories as $category ) {
+		if ( 'eventify' === $category['slug'] ) {
+		return $categories;
+		}
+	}
+
+	return array_merge(	$categories,
+							array(
+								array(
+								'slug' => 'eventify',
+								'title' => __( 'Eventify', 'eventify-block-pack' ),
+								),
+							)
+						);
+}
+add_filter( 'block_categories_all', 'eventify_block_category', 10, 2 );

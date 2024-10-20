@@ -4,8 +4,8 @@
   "name": "create-block/main-events",
   "version": "0.1.0",
   "title": "Main Events",
-  "category": "widgets",
-  "icon": "smiley",
+  "category": "eventify",
+  "icon": "cover-image",
   "description": "Example block scaffolded with Create Block tool.",
   "example": {},
   "supports": {
