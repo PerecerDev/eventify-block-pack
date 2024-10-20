@@ -1,16 +1,89 @@
 /*!**************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/event-list/style.scss ***!
   \**************************************************************************************************************************************************************************************************************************************************/
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
-.wp-block-create-block-eventify-block-pack {
-  background-color: #21759b;
+.list-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+}
+
+.event-card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px 5px rgba(0, 0, 0, 0.062745098);
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.event-card picture {
+  width: 60%;
+  height: 100%;
+  max-height: 275px;
+  position: relative;
+  overflow: hidden;
+}
+.event-card picture img {
+  width: auto;
+  height: 100%;
+}
+.event-card picture div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2509803922);
+  padding: 10px;
+}
+.event-card aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  padding: 20px;
+}
+.event-card aside h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+.event-card aside span {
+  font-size: 14px;
+}
+.event-card aside span p {
+  margin: 0;
+}
+.event-card aside div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  padding: 5px 8px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn--info {
+  background-color: #3490dc;
   color: #fff;
-  padding: 2px;
+}
+
+.btn--primary {
+  background-color: #38c172;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
