@@ -14,6 +14,8 @@
     </ul>
 </div>
 
-<?php }
+<?php } else{
+    echo "<p style='text-align:center; background-color: #ffc6c6; padding: 15px; border-radius: 15px;'>NO HAY EVENTOS</p>";
+}
 
 return ob_get_clean(); } ?>

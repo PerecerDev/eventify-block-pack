@@ -1,4 +1,8 @@
 <?php function filterCards() { ob_start(); 
+$query = get_current_query();
+
+    if (!$query->have_posts()) return;
+
 $current_category = get_current_category();
     $categories = get_terms([
         'taxonomy'   => 'category',
@@ -16,6 +20,7 @@ $current_category = get_current_category();
     <input type="hidden" name="paged" value="1" />
     <button type="submit" class="btn btn--info filter-form__button">Filtrar</button>
 </form>
+
 
 
 <?php return ob_get_clean(); } ?>
