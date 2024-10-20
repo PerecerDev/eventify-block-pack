@@ -10,8 +10,9 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-require_once plugin_dir_path( __FILE__ ) . 'includes/disable_redirect.php';
-require_once plugin_dir_path( __FILE__ ) . 'includes/components.php';
+require_once plugin_dir_path( __FILE__ ) . 'services/disable_redirect.php';
+require_once plugin_dir_path( __FILE__ ) . 'services/components.php';
+require_once plugin_dir_path( __FILE__ ) . 'services/queried_data.php';
 
 function create_block_eventify_block_pack_block_init() {
 	register_block_type( __DIR__ . '/build/event-list' );
