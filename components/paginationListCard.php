@@ -19,7 +19,6 @@ $pagination_args = [
     ?>
 
 <div class="pagination">
-    <h1>pagination</h1>
     <?php echo paginate_links($pagination_args); ?>
 </div>
 

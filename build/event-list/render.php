@@ -1,5 +1,7 @@
-<?php ele('filterCards','') ?>
+<div class="eventify-event-list">
+    <?php ele('filterCards','') ?>
 
-<?php ele('listCard') ?>
+    <?php ele('listCard') ?>
 
-<?php ele('paginationListCard') ?>
+    <?php ele('paginationListCard') ?>
+</div>
