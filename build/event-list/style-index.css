@@ -35,7 +35,24 @@
   width: auto;
   height: 100%;
 }
-.event-card picture div {
+.event-card picture .categories {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.event-card picture .categories span {
+  background-color: #3490dc;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+.event-card picture .details {
   position: absolute;
   display: flex;
   justify-content: space-around;
@@ -44,8 +61,9 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4392156863);
   padding: 20px 0;
+  z-index: 100;
 }
-.event-card picture div span {
+.event-card picture .details span {
   font-size: 12px;
   color: #fff;
 }

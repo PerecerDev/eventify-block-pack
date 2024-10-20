@@ -2,7 +2,16 @@
 <li class="event-card">
     <picture>
         <img src="<?php echo esc_html(get_post_meta(get_the_ID(), '_event_thumbnail', true)); ?>" alt="placeholder">
-        <div>
+        <div class="categories">
+            <?php 
+            $categories = get_the_terms(get_the_ID(), 'category'); // Obtener las categorías del evento
+            if ($categories && !is_wp_error($categories)) : ?>
+            <?php foreach ($categories as $category) : ?>
+            <span class="category-tag"><?php echo esc_html($category->name); ?></span>
+            <?php endforeach; ?>
+            <?php endif; ?>
+        </div>
+        <div class="details">
             <span><i class="fas fa-map-marker-alt"></i>
                 <?php echo esc_html(get_post_meta(get_the_ID(), '_event_location', true)); ?>
             </span>
