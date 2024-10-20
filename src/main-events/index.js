@@ -27,7 +27,7 @@ function Edit() {
 		<>
 		
 		<div { ...useBlockProps() }>
-			<ServerSideRender block="create-block/eventify-block-pack"
+			<ServerSideRender block="create-block/main-events"
 		/>
 		</div>
 		

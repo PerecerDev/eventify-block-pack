@@ -4,5 +4,5 @@
  */
 ?>
 <p <?php echo get_block_wrapper_attributes(); ?>>
-	<?php esc_html_e( 'Eventify Block Pack – hello from a dynamic block!', 'eventify-block-pack' ); ?>
+    <?php esc_html_e( 'Eventify Block Pack – hello from a dynamic block!!!', 'eventify-block-pack' ); ?>
 </p>
