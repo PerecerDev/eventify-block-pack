@@ -1,9 +1,9 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "create-block/eventify-block-pack",
+	"name": "create-block/main-events",
 	"version": "0.1.0",
-	"title": "Eventify Block Pack",
+	"title": "Main Events",
 	"category": "widgets",
 	"icon": "smiley",
 	"description": "Example block scaffolded with Create Block tool.",
@@ -11,10 +11,9 @@
 	"supports": {
 		"html": false
 	},
-	"textdomain": "eventify-block-pack",
+	"textdomain": "main-events",
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
-	"render": "file:./render.php",
-	"viewScript": "file:./view.js"
+	"render": "file:./render.php"
+	
 }

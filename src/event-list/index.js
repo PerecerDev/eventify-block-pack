@@ -4,6 +4,8 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 import { registerBlockType } from '@wordpress/blocks';
+import { useBlockProps } from '@wordpress/block-editor';
+import ServerSideRender from "@wordpress/server-side-render";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -17,8 +19,22 @@ import './style.scss';
 /**
  * Internal dependencies
  */
-import Edit from './edit';
+//import Edit from './edit';
 import metadata from './block.json';
+
+function Edit() {
+	return (
+		<>
+		
+		<div { ...useBlockProps() }>
+			<ServerSideRender block="create-block/eventify-block-pack"
+		/>
+		</div>
+		
+		</> 
+	);
+}
+
 
 /**
  * Every block starts by registering a new block type definition.
@@ -31,3 +47,4 @@ registerBlockType( metadata.name, {
 	 */
 	edit: Edit,
 } );
+
