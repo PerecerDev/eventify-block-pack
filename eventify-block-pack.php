@@ -1,7 +1,7 @@
 <?php
 /**
 * Plugin Name: Eventify Block Pack
-* Description: Habilita bloques de contenido relacionados con los Eventos
+* Description: Habilita bloques de contenido relacionados con los Eventos de Eventify
 * Version: 1.0
 * Author: Alex Perecer
 *
