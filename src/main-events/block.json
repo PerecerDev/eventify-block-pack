@@ -6,7 +6,7 @@
 	"title": "Main Events",
 	"category": "eventify",
 	"icon": "cover-image",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "Muestra los eventos destacados (EN CONSTRUCCIÓN)",
 	"example": {},
 	"supports": {
 		"html": false

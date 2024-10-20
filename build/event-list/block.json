@@ -3,10 +3,10 @@
   "apiVersion": 3,
   "name": "create-block/eventify-block-pack",
   "version": "0.1.0",
-  "title": "Eventify Block Pack",
+  "title": "Event List",
   "category": "eventify",
   "icon": "list-view",
-  "description": "Example block scaffolded with Create Block tool.",
+  "description": "Muestra un listado con los eventos de Eventify",
   "example": {},
   "supports": {
     "html": false
