@@ -17,7 +17,7 @@ $args = [
 if ($current_category) {
     $args['tax_query'] = [
         [
-            'taxonomy' => 'event_categories',
+            'taxonomy' => 'category',
             'field'    => 'slug',
             'terms'    => $current_category,
         ],
@@ -87,7 +87,7 @@ wp_reset_postdata();
         <option value="">Todas las categorías</option>
         <?php 
         $categories = get_terms([
-            'taxonomy' => 'event_categories', 
+            'taxonomy' => 'category', 
             'hide_empty' => true,
         ]);
         foreach ($categories as $category) {
