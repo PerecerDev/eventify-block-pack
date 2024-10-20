@@ -1,55 +1,36 @@
-=== Eventify Block Pack ===
-Contributors:      The WordPress Contributors
-Tags:              block
-Tested up to:      6.6
-Stable tag:        0.1.0
-License:           GPL-2.0-or-later
-License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+# REQUISITOS MÍNIMOS
 
-Example block scaffolded with Create Block tool.
+[x] Crear una nueva tipología de contenido CPT llamada 'Eventos'
+[x] Categorías para eventos
+[x] Añadir mínimo 3 campos personalizados (Fecha, Lugar, URL)
+[x] Crear taxonomía de categorías
+[x] Los eventos pueden tener más de 1 categoría
 
-== Description ==
-
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
-
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
-
-== Installation ==
-
-This section describes how to install the plugin and get it working.
-
-e.g.
-
-1. Upload the plugin files to the `/wp-content/plugins/eventify-block-pack` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
+[x] Crear Bloque Gutenberg personalizado con el listado de eventos
+[x] El listado incluye: Título, Categorías, Campos personalizados, Extracto
+[x] Paginación de 5 eventos por página
+[x] Filtrado por categorías
 
 
-== Frequently Asked Questions ==
+# PRUEBA TÉCNICA
 
-= A question that someone might have =
+Contexto:
+Eventify, plugin de gestión de eventos
 
-An answer to that question.
+Se separa la lógica de la prueba en 2 plugins:
+Eventify y Eventify Block Pack
 
-= What about foo bar? =
+* Eventify - eventify-event-cpt
+Crea el CPT y todo lo relacionado con el almacenamiento y la gestión de la información de los Eventos.
 
-Answer to foo bar dilemma.
+* Eventify Block Pack - eventify-block-pack
+Registra una nueva categoría de Bloques Gutenberg en el editor y añade 2 bloques para su uso.
+Para la prueba, solo 1 está en uso (Event List).
 
-== Screenshots ==
+# Para empezar a utilizar, es necesario descargar los plugins e instalarlos manualmente en el apartado de Plugins de Wordpress. Una vez instalados, deben ser activados.
+# Una vez activados, aparecerá un nuevo elemento de menu llamado 'Eventos'. Accede a 'Todos los eventos' y junto al botón de añadir una nueva entrada, aparecerá un botón para importar datos de ejemplo. Pulsar y esperar a que se carguen los datos de los eventos.
+# Crear una nueva entrada llamada Listado de Eventos. En ella, añadir el Bloque 'Event List' y guardar. Acceder a la página creada para ver filtro de categoría y paginación.
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
-
-== Changelog ==
-
-= 0.1.0 =
-* Release
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
+## REPOS
+- Eventify CPT: https://github.com/PerecerDev/eventify-event-cpt
+- Eventify Block Pack: https://github.com/PerecerDev/eventify-block-pack/
